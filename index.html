@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Fatemeh Barati — Explainable AI for CNNs | PhD Applicant</title>
+<meta name="description" content="Fatemeh Barati — MSc Computer Science, Kharazmi University. Author of CGFI (Contrastive Gradient-Flow Interpretation), published in Machine Learning and Knowledge Extraction. Research interests: human-centered AI, explainable AI, AI for education and society." />
+<meta name="author" content="Fatemeh Barati" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Fatemeh Barati — Explainable AI for CNNs" />
+<meta property="og:description" content="MSc Computer Science. Author of CGFI, published in Machine Learning and Knowledge Extraction. Applying for PhD positions." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,700;1,6..72,300;1,6..72,400&amp;display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #eef2f7; }
+  a { color: #2f5bff; text-decoration: none; }
+  a:hover { color: #1d47e0; }
+  @keyframes dcBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Fatemeh Barati","jobTitle":"MSc Computer Science graduate","alumniOf":[{"@type":"CollegeOrUniversity","name":"Kharazmi University"},{"@type":"CollegeOrUniversity","name":"Alzahra University"}],"knowsAbout":["Explainable AI","Convolutional neural networks","Computer vision","Human-centered AI"],"award":"MenaML Winter School 2026 Full Sponsorship Award (KAUST)","subjectOf":{"@type":"ScholarlyArticle","name":"Contrastive Gradient-Flow Interpretation (CGFI): A Composable Operator for Class-Discriminative Explanation of Convolutional Neural Networks","isPartOf":{"@type":"Periodical","name":"Machine Learning and Knowledge Extraction"},"datePublished":"2026","url":"https://doi.org/10.3390/make8100304"}}</script>
+<script src="https://drive.google.com/file/d/1LmAgQQZ65KL0j7VEIzA5byavB-WcjuhY/view?usp=sharing"></script>
+</helmet>
+
+<div style="width: 100%; min-height: 100vh; container-type: inline-size; background: #f5f8fb; color: #121821; font-family: 'Newsreader', Georgia, serif;">
+
+  <!-- ═══ HEADER ═══ -->
+  <header data-screen-label="Header" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 18px clamp(20px, 4.4cqw, 56px); background: #ffffff; border-bottom: 1px solid rgba(18,24,33,0.09); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;">
+    <span style="display: flex; align-items: center; gap: 12px; font-weight: 500;">
+      <span style="display: flex; gap: 3px;"><span style="width: 5px; height: 14px; background: #2f5bff;"></span><span style="width: 5px; height: 14px; background: #00a08c;"></span><span style="width: 5px; height: 14px; background: #f08a2e;"></span></span>
+      Fatemeh Barati
+    </span>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 22px;">
+      <nav style="display: flex; flex-wrap: wrap; gap: 8px 18px;">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4">
+          <a href="{{ n.href }}" style="color: #121821;" style-hover="color: #2f5bff;">{{ n.label }}</a>
+        </sc-for>
+      </nav>
+      <div style="display: flex; border: 1px solid rgba(18,24,33,0.18);">
+        <button type="button" onClick="{{ setSkim }}" style="{{ skimStyle }}">Skim</button>
+        <button type="button" onClick="{{ setFull }}" style="{{ fullStyle }}">Full</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section data-screen-label="Hero" style="background: #ffffff; padding: clamp(40px, 6cqw, 80px) clamp(20px, 4.4cqw, 56px) clamp(36px, 5cqw, 66px); display: flex; flex-wrap: wrap; gap: clamp(28px, 4cqw, 52px);">
+    <div style="flex: 1 1 340px; min-width: 0;">
+      <p style="display: flex; align-items: center; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #00786a; margin: 0 0 22px;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #00a08c; animation: dcBlink 2.6s ease-in-out infinite; flex: 0 0 auto;"></span>
+        Applying for PhD positions
+      </p>
+      <h1 style="font-size: clamp(32px, 5.6cqw, 62px); line-height: 1.05; font-weight: 300; letter-spacing: -0.022em; margin: 0 0 24px;">Explainable AI that stays faithful to the model and tells <span style="font-style: italic; color: #2f5bff;">classes</span> apart.</h1>
+      <p style="font-size: clamp(17px, 2cqw, 22px); line-height: 1.52; font-weight: 300; max-width: 44ch; margin: 0 0 20px; color: #3a4351;">I'm <strong style="font-weight: 400; color: #121821;">Fatemeh Barati</strong>, a computer scientist working on explainable AI for convolutional neural networks. My MSc thesis introduced CGFI, now published in a <strong style="font-weight: 700; color: #121821;">Q1 journal</strong>.</p>
+      <sc-if value="{{ detail }}" hint-placeholder-val="{{ true }}">
+        <p style="font-size: clamp(16px, 1.75cqw, 19px); line-height: 1.62; font-weight: 300; max-width: 50ch; margin: 0 0 28px; color: #47505e;">Contrastive Gradient-Flow Interpretation combines gradient-flow analysis with contrastive learning to generate explanatory maps that remain faithful to model predictions while offering greater discriminative power between the target class and competing classes.</p>
+      </sc-if>
+      <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+        <sc-for list="{{ heroLinks }}" as="l" hint-placeholder-count="2">
+          <a href="{{ l.href }}" rel="noopener" style="{{ l.style }}">{{ l.label }}</a>
+        </sc-for>
+      </div>
+    </div>
+    <div style="flex: 1 1 250px; min-width: 200px; max-width: 320px; display: flex; flex-direction: column; gap: 12px;">
+      <div onMouseMove="{{ heatMove }}" onMouseLeave="{{ heatLeave }}" style="position: relative; aspect-ratio: 4 / 5; background-color: #eaf0f7; background-image: repeating-linear-gradient(135deg, rgba(47,91,255,0.09) 0 1px, transparent 1px 7px); overflow: hidden; cursor: crosshair;">
+        <image-slot id="portrait" shape="rect" placeholder="Drop your portrait here"></image-slot>
+        <div style="{{ heatStyle }}"></div>
+        <span style="position: absolute; left: 12px; bottom: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #5b6472; pointer-events: none;">portrait</span>
+        <span style="position: absolute; right: 10px; top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.06em; background: #121821; color: #ffffff; padding: 4px 7px; pointer-events: none; opacity: {{ heat.on }}; transition: opacity 0.28s ease;">attention {{ heat.score }}</span>
+        <span style="position: absolute; top: -1px; left: -1px; width: 22px; height: 22px; border-top: 2px solid #2f5bff; border-left: 2px solid #2f5bff; pointer-events: none;"></span>
+        <span style="position: absolute; bottom: -1px; right: -1px; width: 22px; height: 22px; border-bottom: 2px solid #f08a2e; border-right: 2px solid #f08a2e; pointer-events: none;"></span>
+      </div>
+      <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; line-height: 1.7; letter-spacing: 0.04em; color: #5b6472; margin: 0;">MSc Computer Science · BSc Electrical Engineering<sc-if value="{{ detail }}" hint-placeholder-val="{{ true }}"><br /><span style="color: #2f5bff;">Hover the frame — the overlay is a saliency map, which is the thing I study.</span></sc-if></p>
+    </div>
+  </section>
+
+  <!-- ═══ FACT STRIP ═══ -->
+  <dl data-screen-label="Facts" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1px; margin: 0; background: rgba(18,24,33,0.09); border-top: 1px solid rgba(18,24,33,0.09); font-family: 'IBM Plex Mono', monospace;">
+    <sc-for list="{{ facts }}" as="f" hint-placeholder-count="5">
+      <div style="background: #f9fbfd; padding: 20px clamp(16px, 2.2cqw, 26px) 22px; border-top: {{ f.border }};">
+        <dt style="font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #5b6472; margin: 0 0 8px;">{{ f.label }}</dt>
+        <dd style="font-size: 12px; line-height: 1.65; margin: 0; color: #121821;">{{ f.value }}</dd>
+      </div>
+    </sc-for>
+  </dl>
+
+  <!-- ═══ THREE PILLARS ═══ -->
+  <div data-screen-label="Pillars" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: rgba(18,24,33,0.09); border-top: 1px solid rgba(18,24,33,0.09);">
+    <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+      <div style="background: #ffffff; padding: 26px clamp(18px, 2.4cqw, 30px) 30px; border-top: 3px solid {{ p.line }};">
+        <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: {{ p.text }}; margin: 0 0 10px;">{{ p.title }}</h2>
+        <p style="font-size: 16px; line-height: 1.62; margin: 0; color: #3a4351;">{{ p.body }}</p>
+      </div>
+    </sc-for>
+  </div>
+
+  <!-- ═══ 01 RESEARCH ═══ -->
+  <section id="research" data-screen-label="01 Research" style="padding: clamp(44px, 5.6cqw, 76px) clamp(20px, 4.4cqw, 56px) 0; display: flex; flex-wrap: wrap; gap: clamp(20px, 3cqw, 40px);">
+    <div style="flex: 0 0 auto; min-width: 150px; padding-top: 6px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 30px; color: #2f5bff; line-height: 1;">01</span>
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin: 10px 0 0;">Research</h2>
+    </div>
+    <div style="flex: 1 1 420px; min-width: 0;">
+      <p style="font-size: clamp(20px, 2.5cqw, 27px); line-height: 1.45; font-weight: 300; margin: 0 0 22px; max-width: 44ch;">My research centres on explaining the predictions of convolutional neural networks.</p>
+      <sc-if value="{{ detail }}" hint-placeholder-val="{{ true }}">
+        <p style="font-size: clamp(16px, 1.7cqw, 18px); line-height: 1.68; margin: 0 0 26px; max-width: 62ch; color: #47505e;">My MSc thesis at Kharazmi University (advisor: Prof. Mohammad Soltanian) introduced CGFI and was graded 19.75/20. It was published in <em>Machine Learning and Knowledge Extraction</em> with Prof. Keivan Borna and Prof. Luca Longo. A second manuscript with Prof. Longo applies CGFI to explaining fine-grained visual classifiers.</p>
+      </sc-if>
+      <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #5b6472; margin: 0 0 14px;">Research interests</h3>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; gap: 12px;">
+        <sc-for list="{{ interests }}" as="i" hint-placeholder-count="3">
+          <li style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="flex: 0 0 auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: {{ i.text }}; padding-top: 5px;">{{ i.num }}</span>
+            <p style="font-size: clamp(16px, 1.7cqw, 18px); line-height: 1.6; margin: 0; max-width: 58ch;">{{ i.label }}</p>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ 02 PUBLICATIONS ═══ -->
+  <section id="publications" data-screen-label="02 Publications" style="padding: clamp(44px, 5.6cqw, 76px) clamp(20px, 4.4cqw, 56px) 0; display: flex; flex-wrap: wrap; gap: clamp(20px, 3cqw, 40px);">
+    <div style="flex: 0 0 auto; min-width: 150px; padding-top: 6px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 30px; color: #00786a; line-height: 1;">02</span>
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin: 10px 0 0;">Publications</h2>
+    </div>
+    <div style="flex: 1 1 420px; min-width: 0; display: grid; gap: 14px;">
+      <sc-for list="{{ publications }}" as="p" hint-placeholder-count="3">
+        <article onClick="{{ p.toggle }}" style="background: #ffffff; border-left: 3px solid {{ p.line }}; padding: 22px 24px; display: flex; flex-wrap: wrap; gap: 6px 22px; cursor: pointer; box-shadow: {{ p.shadow }};" style-hover="box-shadow: 0 10px 30px -18px rgba(18,24,33,0.4);">
+          <span style="flex: 0 0 52px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding-top: 8px; color: {{ p.text }};">{{ p.year }}</span>
+          <div style="flex: 1 1 260px; min-width: 0;">
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid {{ p.line }}; color: {{ p.text }}; padding: 3px 8px;">{{ p.status }}</span>
+              <sc-if value="{{ p.q1 }}" hint-placeholder-val="{{ false }}">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; background: #121821; color: #ffffff; padding: 4px 8px; font-weight: 500;">Q1 journal</span>
+              </sc-if>
+            </div>
+            <h3 style="font-size: clamp(19px, 2.2cqw, 25px); line-height: 1.32; font-weight: {{ p.weight }}; margin: 0 0 8px;">{{ p.title }}</h3>
+            <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; line-height: 1.5; margin: 0; color: #5b6472;">{{ p.authors }}<sc-if value="{{ p.hasVenue }}" hint-placeholder-val="{{ true }}"> — <em>{{ p.venue }}</em></sc-if></p>
+            <sc-if value="{{ p.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding-top: 14px;">
+                <p style="font-size: 15px; line-height: 1.7; margin: 0 0 14px; max-width: 62ch; color: #47505e;">{{ p.note }}</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;">
+                  <sc-for list="{{ p.links }}" as="l" hint-placeholder-count="1">
+                    <a href="{{ l.href }}" rel="noopener" style="color: {{ p.text }};">{{ l.label }}</a>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+          <span style="flex: 0 0 auto; font-family: 'IBM Plex Mono', monospace; font-size: 16px; padding-top: 5px; color: #5b6472;">{{ p.sign }}</span>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ═══ 03 PROJECTS ═══ -->
+  <section id="projects" data-screen-label="03 Projects" style="padding: clamp(44px, 5.6cqw, 76px) clamp(20px, 4.4cqw, 56px) 0; display: flex; flex-wrap: wrap; gap: clamp(20px, 3cqw, 40px);">
+    <div style="flex: 0 0 auto; min-width: 150px; padding-top: 6px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 30px; color: #a35c07; line-height: 1;">03</span>
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin: 10px 0 0;">Projects</h2>
+    </div>
+    <div style="flex: 1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="5">
+        <article style="background: #ffffff; padding: 22px 22px 24px; border-top: 3px solid {{ p.line }};">
+          <p style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: {{ p.text }}; margin: 0 0 10px;">{{ p.date }}</p>
+          <h3 style="font-size: 21px; font-weight: 400; line-height: 1.3; margin: 0 0 6px;">{{ p.title }}</h3>
+          <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; line-height: 1.5; margin: 0 0 12px; color: #5b6472;">{{ p.org }}</p>
+          <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 1.6; margin: 0; color: #3a4351;">{{ p.summary }}</p>
+          <sc-if value="{{ detail }}" hint-placeholder-val="{{ true }}">
+            <ul style="margin: 12px 0 0; padding: 0 0 0 16px; display: grid; gap: 6px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; line-height: 1.55; color: #5b6472;">
+              <sc-for list="{{ p.points }}" as="pt" hint-placeholder-count="2">
+                <li>{{ pt }}</li>
+              </sc-for>
+            </ul>
+          </sc-if>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ═══ 04 BACKGROUND ═══ -->
+  <section id="background" data-screen-label="04 Background" style="padding: clamp(44px, 5.6cqw, 76px) clamp(20px, 4.4cqw, 56px) clamp(50px, 6cqw, 84px); display: flex; flex-wrap: wrap; gap: clamp(20px, 3cqw, 40px);">
+    <div style="flex: 0 0 auto; min-width: 150px; padding-top: 6px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 30px; color: #2f5bff; line-height: 1;">04</span>
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin: 10px 0 0;">Background</h2>
+    </div>
+    <div style="flex: 1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 32px 40px; font-family: 'IBM Plex Sans', sans-serif;">
+      <sc-for list="{{ columns }}" as="c" hint-placeholder-count="4">
+        <div>
+          <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: {{ c.text }}; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid {{ c.line }};">{{ c.title }}</h3>
+          <div style="display: grid; gap: 14px;">
+            <sc-for list="{{ c.entries }}" as="e" hint-placeholder-count="2">
+              <p style="font-size: 15px; line-height: 1.6; margin: 0;">
+                <strong style="font-weight: 600;">{{ e.title }}</strong><br />
+                <span style="color: #5b6472;">{{ e.meta }}</span>
+                <sc-if value="{{ e.showNote }}" hint-placeholder-val="{{ false }}"><br /><span style="font-size: 14px; color: #47505e;">{{ e.note }}</span></sc-if>
+              </p>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+
+      <div style="grid-column: 1 / -1;">
+        <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #00786a; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid rgba(0,160,140,0.35);">Technical skills</h3>
+        <dl style="margin: 0; display: grid; gap: 8px; font-size: 14px; line-height: 1.6;">
+          <sc-for list="{{ skills }}" as="k" hint-placeholder-count="4">
+            <div style="display: flex; flex-wrap: wrap; gap: 2px 16px;">
+              <dt style="flex: 0 0 170px; font-weight: 600;">{{ k.label }}</dt>
+              <dd style="flex: 1 1 260px; margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #47505e;">{{ k.value }}</dd>
+            </div>
+          </sc-for>
+        </dl>
+      </div>
+
+      <sc-if value="{{ showCertifications }}" hint-placeholder-val="{{ true }}">
+        <div style="grid-column: 1 / -1;">
+          <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #a35c07; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid rgba(240,138,46,0.45);">Selected certifications</h3>
+          <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px 28px; font-size: 14px; line-height: 1.5;">
+            <sc-for list="{{ certifications }}" as="c" hint-placeholder-count="6">
+              <li><strong style="font-weight: 600;">{{ c.name }}</strong><br /><span style="color: #5b6472;">{{ c.issuer }} · {{ c.date }}</span></li>
+            </sc-for>
+          </ul>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ═══ 05 FOR SUPERVISORS ═══ -->
+  <section id="supervisors" data-screen-label="05 For supervisors" style="background: #ffffff; border-top: 1px solid rgba(18,24,33,0.09); padding: clamp(44px, 5.6cqw, 76px) clamp(20px, 4.4cqw, 56px) clamp(50px, 6cqw, 84px); display: flex; flex-wrap: wrap; gap: clamp(20px, 3cqw, 40px);">
+    <div style="flex: 0 0 auto; min-width: 150px; padding-top: 6px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 30px; color: #00786a; line-height: 1;">05</span>
+      <h2 style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin: 10px 0 0;">For supervisors</h2>
+    </div>
+    <div style="flex: 1 1 420px; min-width: 0; display: grid; gap: 1px; background: rgba(18,24,33,0.12); align-content: start;">
+      <sc-for list="{{ faq }}" as="q" hint-placeholder-count="4">
+        <div style="background: #f9fbfd; padding: 20px 22px;">
+          <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: {{ q.text }}; margin: 0 0 9px;">{{ q.question }}</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0; color: #3a4351;">{{ q.answer }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer data-screen-label="Footer" style="background: #121821; color: #eef1f6; padding: clamp(48px, 6cqw, 80px) clamp(20px, 4.4cqw, 56px) clamp(44px, 5.4cqw, 72px);">
+    <div style="display: flex; gap: 4px; margin: 0 0 32px;">
+      <span style="height: 3px; flex: 1; background: #2f5bff;"></span>
+      <span style="height: 3px; flex: 1; background: #00a08c;"></span>
+      <span style="height: 3px; flex: 1; background: #f08a2e;"></span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-end; justify-content: space-between;">
+      <div style="flex: 1 1 340px; min-width: 0;">
+        <h2 style="font-size: clamp(28px, 4cqw, 46px); font-weight: 300; line-height: 1.14; margin: 0 0 16px; max-width: 24ch;">If my work fits your group, I'd like to hear from you.</h2>
+        <p style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 1.8; letter-spacing: 0.06em; margin: 0; color: #9aa3b0;">Fatemeh Barati</p>
+      </div>
+      <div style="flex: 0 1 auto; display: flex; flex-wrap: wrap; gap: 10px;">
+        <sc-for list="{{ footerLinks }}" as="l" hint-placeholder-count="2">
+          <a href="{{ l.href }}" rel="noopener" style="{{ l.style }}">{{ l.label }}</a>
+        </sc-for>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;readerMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;full&quot;,&quot;skim&quot;],&quot;default&quot;:&quot;full&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;showCertifications&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { detail: null, open: {}, heat: { on: 0, x: 50, y: 50 } };
+
+  // ══════════ CONTENT — edit text here; the template renders from it ══════════
+
+  // Fill these in to show the contact/profile buttons (empty = hidden)
+  contact = { email: 'fatemeh.barati.ac@gmail.com', scholar: 'https://scholar.google.com/citations?user=QCQGhrgAAAAJ', linkedin: 'https://www.linkedin.com/in/fatemeh-barati/', github: 'https://github.com/FAtheme', cv: '' };
+
+  paperDoi = 'https://doi.org/10.3390/make8100304';
+
+  nav = [
+    { label: 'Research', href: '#research' },
+    { label: 'Publications', href: '#publications' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Background', href: '#background' },
+  ];
+
+  facts = [
+    { label: 'Research area', value: 'Explainable AI · Human-centered AI' },
+    { label: 'Degrees', value: 'MSc Computer Science, 18.04/20\nBSc Electrical Engineering, 16.58/20' },
+    { label: 'Publications', value: '3 first-author\n2 published · 1 in preparation' },
+    { label: 'Methods', value: 'Python · PyTorch · TensorFlow\nKeras · OpenCV' },
+    { label: 'Looking for', value: 'PhD position\nKAUST MenaML scholar', accent: true },
+  ];
+
+  pillars = [
+    { color: 0, title: 'The method', body: 'CGFI pairs gradient-flow analysis with contrastive learning to generate faithful, discriminative explanatory maps for CNN predictions. MSc thesis graded 19.75/20; published in Machine Learning and Knowledge Extraction (Q1).' },
+    { color: 1, title: 'User research', body: 'As a Technical Product Management Intern at Mobile Communications of Iran (Hamrahe Aval), I led user research and designed surveys for employees managing a service with approximately 12,000 monthly active customers.' },
+    { color: 2, title: 'Teaching', body: "Head Teaching Assistant for three Master's-level courses at Kharazmi University (Machine Learning, Deep Learning, Advanced Data Mining), leading TA teams and designing exercises." },
+  ];
+
+  interests = [
+    'Human-Centered AI and Human-AI Collaboration',
+    'Explainable, Fair, and Trustworthy AI (XAI)',
+    'Interdisciplinary Applications of ML/DL (Behavioral Studies, HCI, AI for Education, AI for Society)',
+  ];
+
+  publications = [
+    { color: 1, year: '2026', status: 'Published', q1: true, featured: true,
+      title: 'Contrastive Gradient-Flow Interpretation (CGFI): A Composable Operator for Class-Discriminative Explanation of Convolutional Neural Networks',
+      authors: 'F. Barati, M. Soltanian, K. Borna and L. Longo',
+      venue: 'Machine Learning and Knowledge Extraction, vol. 8, no. 10, p. 304, 2026',
+      note: 'Published in a Q1 journal. CGFI is the contribution of my MSc thesis, graded 19.75/20.',
+      links: [{ label: 'DOI', href: 'https://doi.org/10.3390/make8100304' }] },
+    { color: 0, year: 'Soon', status: 'Manuscript in preparation',
+      title: 'Contrastive Gradient-Flow Interpretation (CGFI) for Explaining Fine-Grained Visual Classifiers',
+      authors: 'F. Barati and L. Longo', venue: '',
+      note: 'Manuscript in preparation, written with Prof. Luca Longo.', links: [] },
+    { color: 2, year: '2025', status: 'Conference paper',
+      title: 'Human-Centered Explainable AI: An Overview of Current Approaches and Challenges',
+      authors: 'F. Barati',
+      venue: 'Proceedings of the Second International Conference on Computer, Electrical, Mechanical, and Engineering Sciences, May 2025',
+      note: 'An overview of current approaches and challenges in human-centered explainable AI.',
+      links: [{ label: 'Link', href: 'https://en.civilica.com/doc/2280304/' }] },
+  ];
+
+  projects = [
+    { title: 'Heart Disease Prediction', org: 'Kharazmi University · Advanced Data Mining Course', date: 'Jun – Jul 2024',
+      summary: 'Compared Decision Trees, SVMs and Neural Networks on a Kaggle heart disease dataset.',
+      points: ['Processed and analyzed the dataset, selecting key risk factors for prediction', 'Extracted insights from model results to identify individuals at high risk of heart disease'] },
+    { title: 'Image Classification using Transfer Learning', org: 'Kharazmi University · Deep Learning Course', date: 'Jul 2024',
+      summary: 'Leveraged pre-trained models such as EfficientNet and ResNet to enhance model performance.',
+      points: ["Integrated data augmentation strategies to improve the model's ability to generalize", 'Applied multiple regularization techniques to reduce overfitting and improve stability'] },
+    { title: 'AI-Driven Fashion Recommender System', org: 'IPM · Artificial Intelligence Summer Camp', date: 'Aug – Oct 2023',
+      summary: 'Team project; my role was training classification models to categorize clothing by gender and season.',
+      points: [] },
+    { title: 'Finger Detection and Counting using AI', org: "Alzahra University · Bachelor's Project", date: 'Jul – Aug 2023',
+      summary: 'Real-time system built with OpenCV that locates the hand region, extracts contour features and displays the finger count live.',
+      points: [] },
+    { title: "Turbine's Data Classification using AI", org: 'MECO · Internship Project', date: 'Aug – Sep 2022',
+      summary: 'Random Forest reached 99% accuracy, significantly outperforming the other classifiers.',
+      points: ['Implemented Random Forest, KNN, Decision Tree and SVM models on a dataset of over 20,000 rows and 45 features'] },
+  ];
+
+  columns = [
+    { color: 0, title: 'Education', entries: [
+      { title: 'MSc, Computer Science (Decision & Knowledge Sciences)', meta: 'Kharazmi University, Alborz · 2023–2025 · GPA 18.04/20', note: 'Thesis: XAI for CNNs, 19.75/20 (Excellent). Advisor: Prof. Mohammad Soltanian. Courses include Deep Learning (20/20), Data Mining (19.5/20), Machine Learning (18/20).' },
+      { title: 'BSc, Electrical Engineering', meta: 'Alzahra University, Tehran · 2019–2023 · GPA 16.58/20', note: 'Project: Finger Detection and Counting using AI. Advisor: Prof. Amire Seyedfaraji.' },
+      { title: 'Blue Engineering', meta: 'TU Berlin (remote) · Oct–Dec 2021', note: '6 ECTS workshop-style course on ecological and social responsibility in engineering practice.' },
+    ] },
+    { color: 1, title: 'Experience', entries: [
+      { title: 'Technical Product Management Intern', meta: 'Mobile Communications of Iran (Hamrahe Aval) · Jul–Nov 2025', note: 'User research and surveys; PRDs for sign-up workflows and service ordering flows; training in Microsoft Dynamics 365 and Jira.' },
+      { title: 'Junior Data Scientist (job simulation)', meta: 'British Airways (remote) · Jun 2024', note: 'Scraped and analyzed customer review data; built a predictive model of factors influencing buying behavior.' },
+      { title: 'AI Intern', meta: 'MECO (Mapna Electric & Control) · Aug–Sep 2022', note: 'Preprocessed turbine data and trained a multiclass classification model.' },
+      { title: 'Head of Research Committee', meta: "EE Student's Scientific Association, Alzahra University · Jun 2021–Jun 2022", note: 'Supervised tutors, translators and content producers.' },
+      { title: 'Volunteer, Executive Staff', meta: '17th International Conference of the Iranian Operations Research Society · Jul 2024', note: '' },
+    ] },
+    { color: 2, title: 'Teaching', entries: [
+      { title: 'Head Teaching Assistant', meta: 'Kharazmi University · Sep 2024 – Feb 2025', note: "Led TA teams for three Master's-level courses." },
+      { title: 'Machine Learning', meta: 'Prof. Keivan Borna', note: '' },
+      { title: 'Deep Learning', meta: 'Prof. Mohammad Soltanian · English-taught', note: '' },
+      { title: 'Advanced Data Mining', meta: 'Prof. Bardia Panahbehagh · English-taught', note: '' },
+    ] },
+    { color: 0, title: 'Honours & languages', entries: [
+      { title: 'MenaML Winter School 2026 — Full Sponsorship Award', meta: 'KAUST, Saudi Arabia · Jan 2026', note: 'Selected as 1 of 300 scholars from 2,300 applicants (13% acceptance); training by experts from Google DeepMind, QCRI and InstaDeep.' },
+      { title: 'English', meta: 'IELTS Academic 7.0 overall · Apr 2025', note: 'Listening 8.0, Reading 7.5, Writing 6.5, Speaking 6.5.' },
+      { title: 'Persian', meta: 'Native', note: '' },
+    ] },
+  ];
+
+  skills = [
+    { label: 'Fields', value: 'Machine Learning, Deep Learning, Computer Vision, Explainable AI (XAI)' },
+    { label: 'Programming languages', value: 'Python, C, C++' },
+    { label: 'Python libraries', value: 'TensorFlow, Keras, PyTorch, OpenCV, Scikit-learn, Pandas, Numpy, Plotly, Matplotlib' },
+    { label: 'Front-end', value: 'HTML, CSS, JavaScript, Bootstrap, jQuery' },
+  ];
+
+  certifications = [
+    { name: 'Behavioral Economics', issuer: 'MCI Academy', date: 'Apr 2026' },
+    { name: 'AI Ethics', issuer: 'DataCamp', date: 'Feb 2025' },
+    { name: 'Explainable AI in Python', issuer: 'DataCamp', date: 'Feb 2025' },
+    { name: 'Explainable Artificial Intelligence (XAI) Concepts', issuer: 'DataCamp', date: 'Nov 2024' },
+    { name: 'Intermediate SQL', issuer: 'DataCamp', date: 'Sep 2024' },
+    { name: 'How Diffusion Models Work', issuer: 'DeepLearning.AI', date: 'Aug 2024' },
+    { name: 'Image Processing in Python', issuer: 'DataCamp', date: 'Nov 2023' },
+    { name: 'Artificial Intelligence Summer Camp', issuer: 'IPM', date: 'Oct 2023' },
+    { name: 'Introduction to Git and Github', issuer: 'Coursera', date: 'Sep 2023' },
+    { name: 'Python for Computer Vision with OpenCV and Deep Learning', issuer: 'Udemy', date: 'Aug 2023' },
+    { name: 'Machine Learning Specialization', issuer: 'Coursera', date: 'Apr 2023' },
+    { name: 'Data Cleaning', issuer: 'Kaggle', date: 'Sep 2022' },
+  ];
+
+  faq = [
+    { color: 0, question: 'Any awards or funding?', answer: 'I received the full sponsorship award for the MenaML Winter School 2026 at KAUST, selected as 1 of 300 scholars from 2,300 applicants.' },
+    { color: 1, question: 'What can you bring?', answer: "A published XAI method (CGFI) and a second manuscript in preparation; a semester as Head TA across three Master's-level courses; and user research and PRD-writing experience from a product internship." },
+    { color: 2, question: 'What are your interests?', answer: 'Human-centered AI and human-AI collaboration; explainable, fair and trustworthy AI; and interdisciplinary applications of ML/DL (behavioral studies, HCI, AI for education, AI for society).' },
+    { color: 0, question: 'How is your English?', answer: 'IELTS Academic, April 2025: overall 7.0 (Listening 8.0, Reading 7.5, Writing 6.5, Speaking 6.5). I have also been Head TA for two English-taught Master\'s courses.' },
+  ];
+
+  // ══════════ RENDERING — shared look, behaviour ══════════
+
+  palette = [
+    { line: '#2f5bff', text: '#1d47e0', rule: 'rgba(47,91,255,0.35)' },
+    { line: '#00a08c', text: '#00786a', rule: 'rgba(0,160,140,0.35)' },
+    { line: '#f08a2e', text: '#a35c07', rule: 'rgba(240,138,46,0.45)' },
+  ];
+
+  isDetail() {
+    if (this.state.detail !== null) return this.state.detail;
+    return this.props.readerMode !== 'skim';
+  }
+
+  togglePub(i) {
+    this.setState(s => ({ open: { ...s.open, [i]: !s.open[i] } }));
+  }
+
+  heatMove = (e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    this.setState({ heat: { on: 1, x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 } });
+  };
+
+  heatLeave = () => this.setState(s => ({ heat: { ...s.heat, on: 0 } }));
+
+  linkStyle(primary) {
+    const base = "font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 20px; text-align: center;";
+    return primary
+      ? base + ' background: #2f5bff; color: #ffffff;'
+      : base + ' border: 1px solid rgba(18,24,33,0.25); color: #121821;';
+  }
+
+  contactLinks() {
+    const c = this.contact;
+    return [
+      c.email && { label: 'Email', href: 'mailto:' + c.email },
+      c.scholar && { label: 'Google Scholar', href: c.scholar },
+      c.linkedin && { label: 'LinkedIn', href: c.linkedin },
+      c.github && { label: 'GitHub', href: c.github },
+      c.cv && { label: 'CV (PDF)', href: c.cv },
+    ].filter(Boolean);
+  }
+
+  renderVals() {
+    const detail = this.isDetail();
+    const pal = i => this.palette[i % 3];
+    const modeStyle = on => "font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 7px 11px; border: 0; cursor: pointer; " + (on ? 'background: #121821; color: #ffffff;' : 'background: transparent; color: #121821;');
+
+    const heroLinks = [{ label: 'Read the paper', href: this.paperDoi, style: this.linkStyle(true) }]
+      .concat(this.contactLinks().map(l => ({ ...l, style: this.linkStyle(false) })));
+    const footerLinks = this.contactLinks().map((l, i) => ({
+      ...l,
+      style: "font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 23px; text-align: center; " +
+        (i === 0 ? 'background: #2f5bff; color: #ffffff;' : 'border: 1px solid rgba(238,241,246,0.3); color: #eef1f6;'),
+    }));
+
+    const h = this.state.heat;
+    const score = Math.max(0.04, 1 - Math.hypot(h.x - 50, h.y - 50) / 70).toFixed(2);
+    const heatStyle = 'position: absolute; inset: 0; pointer-events: none; transition: opacity 0.28s ease; opacity: ' + h.on +
+      '; background: radial-gradient(120px circle at ' + h.x.toFixed(1) + '% ' + h.y.toFixed(1) + '%, rgba(240,138,46,0.62), rgba(47,91,255,0.34) 48%, transparent 74%);';
+
+    return {
+      heat: { on: h.on, score },
+      heatStyle,
+      heatMove: this.heatMove,
+      heatLeave: this.heatLeave,
+      detail,
+      setSkim: () => this.setState({ detail: false }),
+      setFull: () => this.setState({ detail: true }),
+      skimStyle: modeStyle(!detail),
+      fullStyle: modeStyle(detail),
+      showCertifications: this.props.showCertifications ?? true,
+      nav: this.nav,
+      heroLinks,
+      footerLinks,
+      facts: this.facts.map(f => ({
+        label: f.label,
+        value: f.value.replace(/\n/g, ' · '),
+        border: f.accent ? '2px solid #00a08c' : '0 none',
+      })),
+      pillars: this.pillars.map(p => ({ ...p, ...pal(p.color) })),
+      interests: this.interests.map((label, i) => ({ label, num: '0' + (i + 1), ...pal(i) })),
+      publications: this.publications.map((p, i) => {
+        const open = !!this.state.open[i];
+        return {
+          ...p, ...pal(p.color), open,
+          sign: open ? '–' : '+',
+          weight: p.featured ? 700 : 400,
+          shadow: p.featured ? '0 10px 30px -22px rgba(18,24,33,0.5)' : 'none',
+          hasVenue: !!p.venue,
+          toggle: () => this.togglePub(i),
+        };
+      }),
+      projects: this.projects.map((p, i) => ({ ...p, ...pal(i) })),
+      columns: this.columns.map(c => ({
+        ...c, ...pal(c.color), line: pal(c.color).rule,
+        entries: c.entries.map(e => ({ ...e, showNote: detail && !!e.note })),
+      })),
+      skills: this.skills,
+      certifications: this.certifications,
+      faq: this.faq.map(q => ({ ...q, ...pal(q.color) })),
+    };
+  }
+}
+</script>
+</body>
+</html>
