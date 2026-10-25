@@ -51,16 +51,13 @@
 
   <!-- ═══ HERO ═══ -->
   <section data-screen-label="Hero" style="background: #ffffff; padding: clamp(40px, 6cqw, 80px) clamp(20px, 4.4cqw, 56px) clamp(36px, 5cqw, 66px); display: flex; flex-wrap: wrap; gap: clamp(28px, 4cqw, 52px);">
-    <div style="flex: 1 1 340px; min-width: 0;">
+  <div style="flex: 1 1 340px; min-width: 0;">
       <p style="display: flex; align-items: center; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #00786a; margin: 0 0 22px;">
         <span style="width: 7px; height: 7px; border-radius: 50%; background: #00a08c; animation: dcBlink 2.6s ease-in-out infinite; flex: 0 0 auto;"></span>
-        Applying for PhD positions
+        Applying for PhD positions, 2027 start
       </p>
-      <h1 style="font-size: clamp(32px, 5.6cqw, 62px); line-height: 1.05; font-weight: 300; letter-spacing: -0.022em; margin: 0 0 24px;">Explainable AI that stays faithful to the model and tells <span style="font-style: italic; color: #2f5bff;">classes</span> apart.</h1>
-      <p style="font-size: clamp(17px, 2cqw, 22px); line-height: 1.52; font-weight: 300; max-width: 44ch; margin: 0 0 20px; color: #3a4351;">I'm <strong style="font-weight: 400; color: #121821;">Fatemeh Barati</strong>, a computer scientist working on explainable AI for convolutional neural networks. My MSc thesis introduced CGFI, now published in a <strong style="font-weight: 700; color: #121821;">Q1 journal</strong>.</p>
-      <sc-if value="{{ detail }}" hint-placeholder-val="{{ true }}">
-        <p style="font-size: clamp(16px, 1.75cqw, 19px); line-height: 1.62; font-weight: 300; max-width: 50ch; margin: 0 0 28px; color: #47505e;">Contrastive Gradient-Flow Interpretation combines gradient-flow analysis with contrastive learning to generate explanatory maps that remain faithful to model predictions while offering greater discriminative power between the target class and competing classes.</p>
-      </sc-if>
+      <h1 style="font-size: clamp(32px, 5.6cqw, 62px); line-height: 1.05; font-weight: 300; letter-spacing: -0.022em; margin: 0 0 24px;">Building <span style="font-style: italic; color: #2f5bff;">Human-Centered</span> and <span style="font-style: italic; color: #2f5bff;">Explainable AI</span></h1>
+      <p style="font-size: clamp(17px, 2cqw, 22px); line-height: 1.52; font-weight: 300; max-width: 44ch; margin: 0 0 28px; color: #3a4351;">I am <strong style="font-weight: 400; color: #121821;">Fatemeh Barati</strong>, a computer scientist. I build explanations that stay faithful to the model, and I want to test whether they help people rely on AI appropriately.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 9px;">
         <sc-for list="{{ heroLinks }}" as="l" hint-placeholder-count="2">
           <a href="{{ l.href }}" rel="noopener" style="{{ l.style }}">{{ l.label }}</a>
@@ -325,7 +322,7 @@ class Component extends DCLogic {
   // ══════════ CONTENT — edit text here; the template renders from it ══════════
 
   // Fill these in to show the contact/profile buttons (empty = hidden)
-  contact = { email: 'fatemeh.barati.ac@gmail.com', scholar: 'https://scholar.google.com/citations?user=QCQGhrgAAAAJ', linkedin: 'https://www.linkedin.com/in/fatemeh-barati/', github: 'https://github.com/FAtheme', cv: '' };
+  contact = { email: 'fatemeh.barati.ac@gmail.com', scholar: 'https://scholar.google.com/citations?user=QCQGhrgAAAAJ', linkedin: 'https://www.linkedin.com/in/fatemeh-barati/', github: 'https://github.com/FAtheme', cv: 'files/CV - Fatemeh Barati.pdf' };
 
   paperDoi = 'https://doi.org/10.3390/make8100304';
 
@@ -440,10 +437,9 @@ class Component extends DCLogic {
   ];
 
   faq = [
-    { color: 0, question: 'I have five minutes. What should I read?', answer: 'The CGFI paper, linked under Publications, shows how I work on methods. The internship entry under Background shows how I work with users. Together they are the two sides of what I want to do next.' },
-    { color: 1, question: 'Your main work is on explanation methods. Why do you want to study people?', answer: 'XAI is the tool I know best. The question I care about is how people and AI systems make decisions together. A map can be faithful to the model and still not help the person who reads it. Faithfulness can be tested on the model, but helpfulness can only be tested with people.' },
-    { color: 2, question: 'What have you not done yet?', answer: 'I have not yet published at an HCI venue or run a controlled user study. My work with users so far comes from an internship in industry, not from a research study.' },
-    { color: 0, question: 'What are you looking for in a PhD group?', answer: 'A funded position in a group where explanation methods and studies with people meet. I can bring the method side. I want to learn study design and the statistics for human data from people who do it well.' },
+    { color: 0, question: 'Your main work is on explanation methods. Why do you want to study people?', answer: 'XAI is the tool I know best. The question I care about is how people and AI systems make decisions together. A map can be faithful to the model and still not help the person who reads it. Faithfulness can be tested on the model, but helpfulness can only be tested with people.' },
+    { color: 1, question: 'What have you not done yet?', answer: 'I have not yet published at an HCI venue or run a controlled user study. My work with users so far comes from an internship in industry, not from a research study.' },
+    { color: 2, question: 'What are you looking for in a PhD group?', answer: 'A funded position in a group where explanation methods and studies with people meet. I can bring the method side. I want to learn study design and the statistics for human data from people who do it well.' },
   ];
 
   openQuestions = [
